@@ -45,18 +45,20 @@ The pass rate shows complete coverage but highlights **stability and validation 
 
 
 
-## 4.### Defect Analysis (Risk Level vs. Defect Density)
+## 4.Defect Analysis (Risk Level vs. Defect Density)
+[Click here view/download the full Defect Analysis](https://drive.google.com/file/d/1n77h9l8swsNiiOj4CLZjrl_jFBy4_DEm/view?usp=sharing) 
 
 A comparison between the predefined risk levels and the actual defect density reveals several misalignments. Medium-risk requirements produced the majority of failures, particularly in seat-state synchronization and input-loop validation:
 
-![image.png](attachment:c66d5634-c12a-4a2c-a926-a0567c79482d:image.png)
+<img width="992" height="462" alt="image" src="https://github.com/user-attachments/assets/d3909b45-1bf3-4e08-8471-9e8b4908f87b" />
+
 
 - **REQ-BR-01**, **REQ-NO-02**, **REQ-NO-03**, and **REQ-NO-04** showed sustained defect density across multiple test cases, indicating weaknesses in state management and validation routines.
 - **REQ-BR-05** reported a 100% defect rate but was based on a **single test case**, meaning it confirms a functional issue but cannot be used to measure broader instability.
 - High-risk capacity rules (**REQ-NO-01**) behaved as expected, with a high defect rate aligned to boundary-condition sensitivity.
 - Low-risk requirements remained stable and passed consistently.
 
-![image.png](attachment:3c7a109d-6164-4f58-b077-9eaa22ea070d:image.png)
+<img width="934" height="215" alt="image" src="https://github.com/user-attachments/assets/f7c7028b-4f12-411b-9dd6-25f3feb106ab" />
 
 Overall, defect density exposed problem clusters—mainly synchronization and validation—that were not fully captured by the initial risk ratings. This suggests that future risk scoring should incorporate implementation complexity and historical failure patterns, not only functional importance.
 
