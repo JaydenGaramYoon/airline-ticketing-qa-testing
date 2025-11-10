@@ -16,7 +16,8 @@ The pass rate shows complete coverage but highlights **stability and validation 
 ### QA Analysis Summary (Integrated E2E + JUnit)
 
 [Click here to view/download the full QA Analysis Summary](https://drive.google.com/file/d/1n77h9l8swsNiiOj4CLZjrl_jFBy4_DEm/view?usp=sharing) 
-<img width="1083" height="652" alt="image" src="https://github.com/user-attachments/assets/d8711ddd-473e-4316-9542-4ce78c4dcc59" />
+<img width="1017" height="615" alt="image" src="https://github.com/user-attachments/assets/a0b9fa29-1a5d-4767-89c7-e2f92a6eb1b7" />
+
 
 
 ### Test1 - E2E Manual Testing Summary
@@ -44,9 +45,22 @@ The pass rate shows complete coverage but highlights **stability and validation 
 
 
 
-## 4. Defect Analysis
+## 4.### Defect Analysis (Risk Level vs. Defect Density)
 
-**Most critical defects were related to synchronization issues in seat management**. Multiple tests confirmed that seat allocation states were not consistently updated between Business and Economy classes. **Another recurring issue was input validation failure in user prompts**, where the system failed to exit invalid input loops properly. These indicate the need for synchronization locks and centralized validation control.
+A comparison between the predefined risk levels and the actual defect density reveals several misalignments. Medium-risk requirements produced the majority of failures, particularly in seat-state synchronization and input-loop validation:
+
+![image.png](attachment:c66d5634-c12a-4a2c-a926-a0567c79482d:image.png)
+
+- **REQ-BR-01**, **REQ-NO-02**, **REQ-NO-03**, and **REQ-NO-04** showed sustained defect density across multiple test cases, indicating weaknesses in state management and validation routines.
+- **REQ-BR-05** reported a 100% defect rate but was based on a **single test case**, meaning it confirms a functional issue but cannot be used to measure broader instability.
+- High-risk capacity rules (**REQ-NO-01**) behaved as expected, with a high defect rate aligned to boundary-condition sensitivity.
+- Low-risk requirements remained stable and passed consistently.
+
+![image.png](attachment:3c7a109d-6164-4f58-b077-9eaa22ea070d:image.png)
+
+Overall, defect density exposed problem clusters—mainly synchronization and validation—that were not fully captured by the initial risk ratings. This suggests that future risk scoring should incorporate implementation complexity and historical failure patterns, not only functional importance.
+
+This leads directly into the next section, where the **key observations** summarize what these patterns reveal about system behavior and test coverage.
 
 ## 5. Key Observations
 <img width="851" height="308" alt="image" src="https://github.com/user-attachments/assets/a976e8b1-56b0-404a-9627-43a6e71999d3" />
