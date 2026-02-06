@@ -1,6 +1,6 @@
 # Test Suites Development & System QA Analysis | Airline Ticketing System
 
-This repository contains **[automated JUnit test cases and QA analysis artifacts](https://github.com/JaydenGaramYoon/airline-ticketing-qa-testing/tree/main/JUnit/src/garam/yoon/airticket/requirements/tests)** for the Airline Ticketing System.  
+This repository contains **[automated JUnit test cases](https://github.com/JaydenGaramYoon/airline-ticketing-qa-testing/tree/main/JUnit/src/garam/yoon/airticket/requirements/tests) and QA analysis artifacts** for the Airline Ticketing System.  
 It includes both **functional and non-functional testing** to validate core business logic, seat management, and console behavior.
 
 
